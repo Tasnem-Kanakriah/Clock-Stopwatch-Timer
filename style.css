@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+/* font-family: 'Caveat', cursive; */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+    font-family: 'Caveat', cursive;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background-image: url('background.jpg');
+    background-position: center;
+    background-size: cover;
+}
+body::after {
+    position: absolute;
+    display: block;
+    content: '';
+    background-color: rgba(143, 130, 155, 0.274);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.content .type {
+    text-align: center;
+    font-size: 60px;
+    text-shadow: 0 0 20px;
+    color: #e0d1af;
+    letter-spacing: 5px;
+}
+.container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 800px;
+    padding: 60px;
+    border-radius: 12px;
+    color: #fff;
+    background-color: #1b22426e;
+    box-shadow: 0 0 120px rgba(255, 255, 255, 0.301) ;
+}
+.name {
+    position: absolute;
+    bottom: 10px;
+    font-size: 18px;
+    right: 20px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px red;
+    color: #e0d1af;
+}
+p {
+    font-size: 10px;
+    font-weight: 500;
+    color: #ffffff62;
+    text-transform: uppercase;
+}
+.wrapper {
+    padding: 30px 50px;
+    border-radius: 12px;
+    margin-top: 25px;
+    background: #39366079;
+    box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.164) ;
+    backdrop-filter: blur(1.5px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: all .3s;
+}
+.wrapper:hover {
+    box-shadow: none;
+}
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.main div {
+    width: 20%;
+    text-align: center;
+}
+.main .number {
+    position: relative;
+    font-size: 100px;
+    text-shadow: 0 0 15px ;
+    font-weight: 100;
+    line-height: 1;
+    color: #e0d1af;
+}
+.main .colon {
+    font-size: 80px;
+    color: #e4d8bd;
+    margin-bottom: 10px;
+    text-shadow: 0 0 15px ;
+}
+.btns {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.btn {
+    padding: 10px 20px ;
+    border-radius: 8px;
+    color: #e0d1af;
+    border: none;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all .3s;
+    background: #39366079;
+    text-shadow: 0 0 10px ;
+    box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.164) ;
+    border: 1px solid rgba(255, 255, 255, .18);
+}
+.btn:active {
+    box-shadow: none;
+}
+.laps {
+    position: relative;
+    max-height: 100px;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.laps .lap {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: rgba(255, 255, 255, .15);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, .18);
+}
+.laps .lap.active p {
+    color: #e4d8bd;
+    font-size: 15px;
+}
+.hidden {
+    display: none;
+}
+
+
+
+
+
+@media (max-width : 660px) {
+    .container {
+        /* height: 100vh; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 5px;
+        padding: 40px 20px;
+    }
+    .outer-wrapper {
+        padding: 20px 0;
+    }
+    .main div {
+        width: 15%;
+    }
+    .main .number+p  {
+        font-size: 10px;
+        color: blue;
+        margin-top: 8px;
+    }
+    .main .number {
+        font-size: 40px;
+    }
+    .main .colon {
+        font-size: 30px;
+        margin-bottom: 1px;
+        margin-left: 8px;
+    }
+}
+@media (max-width : 370px) {
+    .main .number {
+        font-size: 25px;
+    }
+    .content .type {
+        font-size: 40px;
+    }
+    .laps .lap {
+        width: 100% ;
+    }
+}
+@media (max-width : 320px) {
+    .main .number {
+        font-size: 20px;
+    }
+    .content .type {
+        font-size: 20px;
+    }
+}
+@media (max-width : 240px) {
+    .main .number {
+        font-size: 15px;
+    }
+    .main .colon {
+        font-size: 15px;
+        margin-bottom: 2px;
+    }
+}
